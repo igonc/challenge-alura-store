@@ -25,6 +25,23 @@ Ajudar o Senhor João a decidir **qual loja da rede Alura Store deve ser vendida
 
 ---
 
+📥 Origem dos Dados
+Os arquivos .csv com os dados de vendas das quatro lojas foram disponibilizados pela própria Alura no repositório oficial do desafio:
+
+📂 Repositório original:
+https://github.com/alura-es-cursos/challenge1-data-science
+
+📌 Arquivos utilizados:
+
+- loja_1.csv
+- loja_2.csv
+- loja_3.csv
+- loja_4.csv
+
+Estes arquivos contêm as informações de vendas, frete, avaliação, localidade (latitude/longitude), categorias, vendedores, e formas de pagamento.
+
+---
+
 ## 📦 Bibliotecas utilizadas
 
 - `pandas`
