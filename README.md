@@ -19,9 +19,16 @@ Ajudar o Senhor João a decidir **qual loja da rede Alura Store deve ser vendida
 
 ## 📁 Estrutura do Projeto
 
-- `AluraStore.Br.ipynb`: Notebook com todo o código, análises e gráficos
-- `loja_1.csv` até `loja_4.csv`: Dados das 4 lojas
-- `README.md`: Descrição completa do projeto
+```bash
+alura-store-challenge/
+│
+├── AluraStoreBr.ipynb        # Notebook com todo o código e gráficos
+├── loja_1.csv                # Dados da Loja 1
+├── loja_2.csv                # Dados da Loja 2
+├── loja_3.csv                # Dados da Loja 3
+├── loja_4.csv                # Dados da Loja 4
+└── README.md                 # Documentação do projeto
+```
 
 ---
 
@@ -64,15 +71,52 @@ Estes arquivos contêm as informações de vendas, frete, avaliação, localidad
 
 ---
 
-## ✅ Conclusão
+## 📈 Exemplos de Gráficos e Insights Obtidos
+### 🔹 Faturamento por Loja
+Gráfico de barras comparando o total vendido por loja.
+➡ Loja 4 teve o menor faturamento.
 
-Após as análises, recomendamos que o Senhor João venda a **Loja 4**, por apresentar:
+### 🔹 Vendas por Categoria
+Gráficos horizontais mostraram que a Loja 4 possui menor diversidade e volume em categorias populares.
 
-- Menor faturamento
-- Pior avaliação média
-- Menor eficiência logística
-- Menor capilaridade geográfica
-- Mix de produtos menos consistente
+### 🔹 Avaliações de Clientes
+Histogramas + curvas KDE para cada loja revelaram:
+
+Loja 1 → maior concentração de notas 4 e 5
+
+Loja 4 → mais avaliações baixas e média geral mais baixa (3.72)
+
+### 🔹 Produtos Mais e Menos Vendidos
+Gráficos de barras e nuvens de palavras mostram:
+
+Produtos mais vendidos em destaque por loja
+
+Loja 4 com menor consistência de campeões de venda
+
+### 🔹 Frete Médio
+Gráfico horizontal com rótulo embutido:
+➡ Loja 4 teve o maior custo médio de frete (R$ 29,03)
+
+### 🔹 Mapa Geográfico
+Mapa interativo com marcadores coloridos para cada loja, usando jitter para evitar sobreposição.
+➡ Loja 4 com menor presença em regiões de alta densidade populacional.
+
+---
+
+## ✅ Conclusão da Análise
+A loja recomendada para ser vendida é a Loja 4, por apresentar:
+
+📉 Menor faturamento
+
+😞 Pior média de avaliações
+
+🧊 Produtos menos consistentes
+
+🚚 Frete mais caro
+
+🌍 Alcance geográfico reduzido
+
+A análise permite que o Senhor João focalize esforços nas lojas mais promissoras e com maior potencial de crescimento.
 
 ---
 
@@ -81,4 +125,4 @@ Após as análises, recomendamos que o Senhor João venda a **Loja 4**, por apre
 1. Clone este repositório:
 ```bash
 git clone https://github.com/seu-usuario/alura-store-challenge.git
-
+```
