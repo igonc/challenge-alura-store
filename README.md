@@ -1,6 +1,6 @@
 # 📊 Alura Store Challenge
 
-Desafio de análise de dados proposto pela Oracle + Alura, com foco em Data Science, visualização de dados e tomada de decisão baseada em evidências.
+Desafio de análise de dados proposto pela **Oracle + Alura**, com foco em **Data Science**, **visualização de dados** e **tomada de decisão baseada em evidências**.
 
 ---
 
@@ -8,12 +8,12 @@ Desafio de análise de dados proposto pela Oracle + Alura, com foco em Data Scie
 
 Ajudar o Senhor João a decidir **qual loja da rede Alura Store deve ser vendida**, com base em:
 
-- Faturamento
-- Categorias mais vendidas
-- Avaliação média dos clientes
-- Produtos mais e menos vendidos
-- Frete médio por loja
-- (Extra) Distribuição geográfica das vendas
+- 📈 Faturamento total
+- 📦 Categorias mais vendidas
+- ⭐ Avaliação média dos clientes
+- 🛒 Produtos mais e menos vendidos
+- 🚚 Frete médio por loja
+- 🗺️ (Extra) Distribuição geográfica das vendas
 
 ---
 
@@ -22,107 +22,109 @@ Ajudar o Senhor João a decidir **qual loja da rede Alura Store deve ser vendida
 ```bash
 alura-store-challenge/
 │
-├── AluraStoreBr.ipynb        # Notebook com todo o código e gráficos
+├── gráficos/                 # Pasta com imagens geradas durante a análise
+├── AluraStoreBr_v2.ipynb     # Notebook com todo o código e gráficos
 ├── loja_1.csv                # Dados da Loja 1
 ├── loja_2.csv                # Dados da Loja 2
 ├── loja_3.csv                # Dados da Loja 3
 ├── loja_4.csv                # Dados da Loja 4
+├── mapa_loja_1.html          # Mapa interativo da Loja 1
+├── mapa_loja_2.html          # Mapa interativo da Loja 2
+├── mapa_loja_3.html          # Mapa interativo da Loja 3
+├── mapa_loja_4.html          # Mapa interativo da Loja 4
+├── mapa_lojas.html           # Mapa interativo com a distribuição das lojas
 └── README.md                 # Documentação do projeto
 ```
 
 ---
 
-📥 Origem dos Dados
-Os arquivos .csv com os dados de vendas das quatro lojas foram disponibilizados pela própria Alura no repositório oficial do desafio:
+## 📥 Origem dos Dados
 
-📂 Repositório original:
-https://github.com/alura-es-cursos/challenge1-data-science
+Os arquivos `.csv` com os dados de vendas foram disponibilizados pela Alura no repositório oficial do desafio:
 
-📌 Arquivos utilizados:
+🔗 [Repositório original](https://github.com/alura-es-cursos/challenge1-data-science)
 
-- loja_1.csv
-- loja_2.csv
-- loja_3.csv
-- loja_4.csv
+Arquivos utilizados:
 
-Estes arquivos contêm as informações de vendas, frete, avaliação, localidade (latitude/longitude), categorias, vendedores, e formas de pagamento.
+- `loja_1.csv`
+- `loja_2.csv`
+- `loja_3.csv`
+- `loja_4.csv`
+
+As informações contêm dados de:
+
+- Produtos vendidos
+- Categorias
+- Preço e frete
+- Avaliação do cliente
+- Vendedor
+- Localização (latitude e longitude)
+- Tipo e forma de pagamento
 
 ---
 
-## 📦 Bibliotecas utilizadas
+## 📦 Bibliotecas Utilizadas
 
 - `pandas`
+- `numpy`
 - `matplotlib`
 - `seaborn`
 - `folium`
 - `wordcloud`
-- `numpy`
 
 ---
 
-## 📊 Principais Análises
+## 📊 Principais Análises Realizadas
 
 - Comparação de faturamento entre as lojas
-- Distribuição de categorias por loja
-- Análise de avaliações com histogramas e curvas KDE
-- Nuvens de palavras dos produtos vendidos
-- Análise de frete médio
-- Mapa geográfico interativo das vendas (com jitter para evitar sobreposição)
+- Análise de categorias mais vendidas por loja
+- Distribuição de avaliações (histogramas + curva de densidade)
+- Nuvem de palavras com os produtos mais vendidos
+- Análise do frete médio com boxplot
+- Mapas geográficos (dispersão e concentração de vendas por estado)
 
 ---
 
 ## 📈 Exemplos de Gráficos e Insights Obtidos
+
 ### 🔹 Faturamento por Loja
-Gráfico de barras comparando o total vendido por loja.
-➡ Loja 4 teve o menor faturamento.
+> Loja 4 teve o menor faturamento: **R$ 1.384.498**
 
-### 🔹 Vendas por Categoria
-Gráficos horizontais mostraram que a Loja 4 possui menor diversidade e volume em categorias populares.
+### 🔹 Categorias Mais Vendidas
+> Loja 4 com desempenho inferior nas categorias **eletrodomésticos** e **instrumentos musicais**
 
-### 🔹 Avaliações de Clientes
-Histogramas + curvas KDE para cada loja revelaram:
-
-Loja 1 → maior concentração de notas 4 e 5
-
-Loja 4 → mais avaliações baixas e média geral mais baixa (3.72)
+### 🔹 Avaliações dos Clientes
+> Loja 1: maior frequência de notas 5  
+> Loja 4: média mais baixa e maior número de avaliações negativas
 
 ### 🔹 Produtos Mais e Menos Vendidos
-Gráficos de barras e nuvens de palavras mostram:
+> Loja 4 teve baixa consistência e pulverização das vendas  
+> Loja 1 apresentou líderes claros de vendas
 
-Produtos mais vendidos em destaque por loja
+### 🔹 Frete Médio por Loja
+> Loja 4 teve **o menor custo médio de frete**, mas ainda assim o pior desempenho geral
 
-Loja 4 com menor consistência de campeões de venda
-
-### 🔹 Frete Médio
-Gráfico horizontal com rótulo embutido:
-➡ Loja 4 teve o maior custo médio de frete (R$ 29,03)
-
-### 🔹 Mapa Geográfico
-Mapa interativo com marcadores coloridos para cada loja, usando jitter para evitar sobreposição.
-➡ Loja 4 com menor presença em regiões de alta densidade populacional.
+### 🔹 Concentração Geográfica
+> Loja 4 tem presença mais dispersa e menor foco em regiões estratégicas como **SP, RJ e MG**
 
 ---
 
 ## ✅ Conclusão da Análise
-A loja recomendada para ser vendida é a Loja 4, por apresentar:
 
-📉 Menor faturamento
+A loja recomendada para ser vendida é a **Loja 4**, por apresentar:
 
-😞 Pior média de avaliações
-
-🧊 Produtos menos consistentes
-
-🚚 Frete mais caro
-
-🌍 Alcance geográfico reduzido
-
-A análise permite que o Senhor João focalize esforços nas lojas mais promissoras e com maior potencial de crescimento.
+- 📉 Menor faturamento
+- ⭐ Avaliações mais baixas e dispersas
+- 📦 Menor eficiência nas categorias estratégicas
+- 🛍️ Mix de produtos com baixa consistência
+- 🚚 Frete barato, porém insuficiente para compensar a performance ruim
+- 🗺️ Presença geográfica fraca em regiões densas
 
 ---
 
-## 🚀 Como executar
+## 🚀 Como Executar
 
 1. Clone este repositório:
+
 ```bash
 git clone https://github.com/seu-usuario/alura-store-challenge.git
-```
